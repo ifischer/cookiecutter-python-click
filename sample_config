@@ -1,0 +1,6 @@
+default_context:
+    package_name: foobar_project
+    module_name: foobar_module
+    description: foobar_description
+    cli_script: foobar_cliscript
+    docker_container_name: foobar_docker
