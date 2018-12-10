@@ -29,8 +29,8 @@ cookiecutter -o $PROJECT_HOME .
 Test
 ----
 
-For an initial test, go to your generated project home and run:
+To test creation of a new project with this cookiecutter, run:
+```
+./test.sh
+```
 
-```
-make build test
-```
