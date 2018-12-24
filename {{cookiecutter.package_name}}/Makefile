@@ -23,7 +23,7 @@ docker-test:
 	docker run --rm -i -t $(CONTAINER) pytest
 
 virtualenv-create:  ## Create virtualenv
-	virtualenv --python=/usr/bin/python3.7 $(VIRTUALENV_DIR)
+	virtualenv --python=$$(which python{{cookiecutter.python_version}}) $(VIRTUALENV_DIR)
 	$(VIRTUALENV_DIR)/bin/pip3 install -r requirements.txt
 	$(VIRTUALENV_DIR)/bin/pip3 install -r requirements-dev.txt
 	$(VIRTUALENV_DIR)/bin/pip3 install -e .
