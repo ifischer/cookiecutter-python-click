@@ -1,4 +1,4 @@
-FROM python{%- if cookiecutter.python_version %}:{{ cookiecutter.python_version }}{%- endif %}
+FROM python{%- if cookiecutter.python_docker_version %}:{{ cookiecutter.python_docker_version }}{%- endif %}
 RUN pip install --upgrade setuptools pip
 
 ENV PYTHONUNBUFFERED 1
