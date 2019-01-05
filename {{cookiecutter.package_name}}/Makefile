@@ -22,6 +22,7 @@ docker-shell:  ## Run Docker shell
 docker-test:
 	docker run --rm -i -t $(CONTAINER) pytest
 
+
 virtualenv-create:  ## Create virtualenv
 	virtualenv --python=$$(which python{{cookiecutter.python_version}}) $(VIRTUALENV_DIR)
 	$(VIRTUALENV_DIR)/bin/pip3 install -r requirements.txt
@@ -31,6 +32,7 @@ virtualenv-create:  ## Create virtualenv
 
 virtualenv-test:
 	$(VIRTUALENV_DIR)/bin/pytest
+
 
 lint:  ## Run linter (Flake8, isort)
 	$(DOCKERCMD) pytest --flake8
