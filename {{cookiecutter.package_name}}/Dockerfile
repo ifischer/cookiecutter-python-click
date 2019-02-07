@@ -1,4 +1,4 @@
-FROM python{%- if cookiecutter.python_docker_version %}:{{ cookiecutter.python_docker_version }}{%- endif %}
+FROM python{%- if cookiecutter.python_version %}:{{ cookiecutter.python_version }}{%- endif %}
 RUN pip install --upgrade setuptools pip
 
 ENV PYTHONUNBUFFERED 1
@@ -17,5 +17,6 @@ RUN mkdir -p $(python -m site --user-site)
 RUN cd $(python -m site --user-site) && python /code/setup.py develop
 
 # Configure IPython
-ADD config/ipython/ipython_config.py /root/.ipython/profile_default/
-ADD config/ipython/startup.py /root/.ipython/profile_default/startup/
+COPY config/ipython/ipython_config.py /root/.ipython/profile_default/
+COPY config/ipython/startup.py /root/.ipython/profile_default/startup/
+

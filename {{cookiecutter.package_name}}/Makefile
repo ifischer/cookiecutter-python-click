@@ -22,6 +22,9 @@ docker-shell:  ## Run Docker shell
 docker-test:
 	docker run --rm -i -t $(CONTAINER) pytest
 
+docker-ipython:
+	docker run -v $$(pwd):/code $(CONTAINER) ipython
+
 
 virtualenv-create:  ## Create virtualenv
 	virtualenv --python=$$(which python{{cookiecutter.python_version}}) $(VIRTUALENV_DIR)

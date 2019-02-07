@@ -1,1 +1,1 @@
-{{cookiecutter.python_version}}
+{{cookiecutter.pyenv_python_version}}
