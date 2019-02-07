@@ -31,6 +31,6 @@ Test
 
 To test creation of a new project with this cookiecutter, run:
 ```
-./test.sh
+make generate-example
 ```
 
