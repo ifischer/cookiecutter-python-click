@@ -8,7 +8,6 @@ Features:
 * Docker as sole requirement
 * Makefile for quick access to Docker commands 
 
-
 Installation
 ------------
 

@@ -10,4 +10,3 @@ clean:
 	rm -rf example_project/example_project.egg-info
 	rm -rf example_project/.pytest_cache
 	find example_project -name "*.pyc" -exec rm {} \;
-
