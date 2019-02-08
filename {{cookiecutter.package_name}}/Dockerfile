@@ -2,6 +2,7 @@ FROM python{%- if cookiecutter.python_version %}:{{ cookiecutter.python_version 
 RUN pip install --upgrade setuptools pip
 
 ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONPATH=/code
 
 WORKDIR /code

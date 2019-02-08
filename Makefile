@@ -1,12 +1,16 @@
-generate-example:  ## Generate code from cookiecutter template
+EXAMPLE = example_project
+
+build:  ## Create example from cookiecutter template
 	cookiecutter --overwrite-if-exists --no-input --config-file ./sample_config .
-	cd example_project && \
+
+test:  ## Test generated example
+	cd $(EXAMPLE) && \
 		make docker-build docker-test && \
 		make virtualenv-create virtualenv-test && \
 		echo "TEST SUCCESSFUL"
 
 clean:
-	rm -rf example_project/.venv
-	rm -rf example_project/example_project.egg-info
-	rm -rf example_project/.pytest_cache
-	find example_project -name "*.pyc" -exec rm {} \;
+	rm -rf $(EXAMPLE)/.venv
+	rm -rf $(EXAMPLE)/example_project.egg-info
+	rm -rf $(EXAMPLE)/.pytest_cache
+	find $(EXAMPLE) -name "*.pyc" -exec rm {} \;
