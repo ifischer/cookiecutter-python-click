@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='example_project',
-    description='example_description',
+    name='example',
+    description='description',
     packages=find_packages(),
     version='0.0.1',
     install_requires=[
@@ -10,7 +10,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'example_cliscript=example_module.commands:cli'
+            'cliscript=example.commands:cli'
         ]
     },
     python_requires='>=3.7'
